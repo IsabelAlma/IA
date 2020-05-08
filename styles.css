@@ -1,0 +1,177 @@
+body {
+	background: #BDC3C7;
+	color: #1A1C2C;
+}
+
+.container {
+	max-width: 1366px;
+	margin: 0 auto;
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+#about {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+#projects {
+  top: 80px;
+  background-color: #2196F3; /* Blue */
+}
+
+#contactme {
+  top: 140px;
+  background-color: #f44336; /* Red */
+}
+
+#resume {
+  top: 200px;
+  background-color: #555 /* Light Black */
+}
+
+ /*  #E89005  Orange color */
+
+.intro{
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.profile-picture {
+	border: 3px solid black; 
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+	transition: all ease-in-out .2s;
+}
+.profile-picture:hover {
+	box-shadow: 0 8px 12px 0 rgba(34,60,80,.16);
+}
+
+.about-grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	font-family: sans-serif;
+}
+.i-am, .i-like {
+	text-align: center;
+	text-decoration: none
+}
+
+.about-list {
+	list-style: none;
+	padding: 0;
+} 
+.links-and-contact {
+		grid-template-columns: 100%;
+	}
+
+.projects-heading {
+	text-align: center;
+	font-family: sans-serif;	
+}
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.project-image {
+border-radius: 5px;
+	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+	transition: all ease-in-out .2s;
+}
+
+.project-image:hover {
+	filter: brightness(.75);
+	box-shadow: 0 8px 12px 0 rgba(34, 60, 80, .16);
+}
+.project-image-wrapper{
+	justify-self: center;
+	padding: 4%;
+	position: relative;
+}
+.project-image-wrapper:hover > h4 {
+	visibility: visible;
+}
+
+.project-image-wrapper > h4 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	visibility: hidden;
+	z-index: 2;
+	transition: all ease-in-out .2s;
+	font-family: sans-serif;
+}
+
+.ft-social {
+    padding: 0 1.875rem 1.25rem;
+}
+.links-list {
+	display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid; 
+    padding-top: 1.25rem;
+}
+.ft-contact {
+	justify-self: center;
+	font-family: sans-serif;
+}
+form input, textarea {
+	padding: 5px;
+	border-radius: 5px;
+	width: 240px;
+	font-family: sans-serif;
+}
+
+form {
+	width: 250px;
+	margin: 0 auto;
+}
+
+form input[type="submit"] {
+	width: 250px;
+}
+
+.submit-button-wrapper {
+	margin: 20px 0;
+}
+footer {
+    background-color: #555;
+    color: #bbb;
+    line-height: 1.5;
+}
+hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 480px) {
+	.about-grid {
+		grid-template-columns: 100%;
+	}
+}
+@media (max-width: 650px) {
+	.projects-grid {
+		grid-template-columns: 100%;
+	}
+}
