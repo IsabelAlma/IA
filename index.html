@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,34 +47,53 @@
 <hr/>
 
 	<div>
-		<h3 class="projects-heading">My Projects</h3>
-		<div class="projects-grid">
-				<div class="project-image-wrapper">
+		<h3 class ="projects-heading">My Projects </h3>
+	
+			<div class = "row">
+				<div class="column project-image-wrapper">
 				<h4>This Website!</h4>
-			<img class="project-image" src="images/wireframe.jpg" height="300" width="300">
+			<img  class="project-image" id = "thisWebsite"   alt="TBD" 
+			src="C:\Users\Isabela\Desktop\portfolio\images\wireframe.jpg" height="300" width="300" onclick="myFunction(this);">
 				</div>
 			
-			<div class="project-image-wrapper">
+
+			<div class="column project-image-wrapper">
 				<h4>Project 2</h4>
-			<img class="project-image" src="https://via.placeholder.com/300"/>
+			<img class="project-image"   alt="TBD"  src="https://via.placeholder.com/300" onclick="myFunction(this);">
 				</div>
 
-			<div class="project-image-wrapper">	
+			<div class="column project-image-wrapper">	
 				<h4>Project 3</h4>
-			<img class="project-image" src="https://via.placeholder.com/300"/>
+			<img class="project-image" alt="TBD"  src="https://via.placeholder.com/300" onclick="myFunction(this);">
 				</div>
 
 
-			<div class="project-image-wrapper">
+			<div class="column project-image-wrapper">
 				<h4>Project 4</h4>
-			<img class="project-image" src="https://via.placeholder.com/300"/>
+			<img class="project-image" alt="TBD"  src="https://via.placeholder.com/300" onclick="myFunction(this);">
 			</div>
+		<!-- The expanding image container -->
+		<div class="contain">
+		  <!-- Close the image -->
+		  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 
-			</div>
+		  <!-- Expanded image -->
+		  <img id="expandedImg" style="width:100%">
+
+		  <!-- Image text -->
+		  <div id="imgtext"></div>
 		</div>
 
+		</div>
+			
+	</div>
+
 </div>
+
+	<script src="script.js"></script>
+
 </body>
+
 <footer>
 <section class="ft-contact">
 			<form action="#">
@@ -97,20 +115,18 @@
 <section class="ft-social">
 		<ul class="links-list">
 				<a href="https://www.linkedin.com/in/almagueri/">
-					<img alt="Linkedin" src="https://raw.githubusercontent.com/IsabelAlma/IA/master/images/linkedin.png" height="48" width="48"></a>
+					<img alt="Linkedin" src="C:\Users\Isabela\Desktop\portfolio\images\linkedin.png" height="48" width="48"></a>
 						
 				<a href="https://github.com/IsabelAlma">
-					<img alt"Github" src="https://raw.githubusercontent.com/IsabelAlma/IA/master/images/github.png"height="48" width="48"></a>
+					<img alt"Github" src="C:\Users\Isabela\Desktop\portfolio\images\github.png"height="48" width="48"></a>
 
 				<a href="https://www.instagram.com/happy_bellyig/">
-					<img alt"Instagram" src="https://raw.githubusercontent.com/IsabelAlma/IA/master/images/insta.png"height="48" width="48"></a>
+					<img alt"Instagram" src="C:\Users\Isabela\Desktop\portfolio\images\insta.png"height="48" width="48"></a>
 		<ul/>
 		</div>
 
 </footer>
 
-	
-	<script src="script.js"></script>
 
 </html>
 
