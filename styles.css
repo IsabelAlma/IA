@@ -253,25 +253,11 @@ border-radius: 5px;
 }
 
 
-
-.ft-social {
-    padding: 0 2rem 2rem;
-}
-.links-list {
-	display: flex;
-    justify-content: center;
-    border-top: 1px #777 solid; 
-    padding-top: 1.25rem;
-}
-.ft-contact {
-	justify-self: center;
-	font-family: sans-serif;
-}
-
-hr {
-	border: 0;
-	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+footer {
+    background-color: #555;
+    color: #bbb;
+    margin: 0 auto;
+    
 }
 
 form input, textarea {
@@ -282,6 +268,7 @@ form input, textarea {
 }
 
 form {
+  padding: 5px;
 	width: 250px;
 	margin: 0 auto;
 }
@@ -293,12 +280,28 @@ form input[type="submit"] {
 .submit-button-wrapper {
 	margin: 20px 0;
 }
-footer {
-    background-color: #555;
-    color: #bbb;
-    line-height: 1.5;
-}
 
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+
+}
+.ft-social {
+    padding: 0 2rem 2rem;
+}
+.links-list {
+  display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid; 
+    padding-top: 1.25rem;
+
+}
+.ft-contact {
+  justify-self: center;
+  font-family: sans-serif;
+
+}
 
 @media (max-width: 480px) {
 	.about-grid {
