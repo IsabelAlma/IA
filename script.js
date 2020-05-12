@@ -33,11 +33,12 @@ var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  modalImg.attr('src', newSrc);
-  captionText.innerHTML = this.alt;
+
+function onClick() {
+  document.getElementById("myModal").style.display = "block";
+  document.getElementById("img01").src = this.src;
+  document.getElementById("img01").attr('src', newSrc);
+  document.getElementById("caption").innerHTML = this.alt;
 }
 
 // Get the <span> element that closes the modal
