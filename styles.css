@@ -1,6 +1,7 @@
 body {
 	background: #BDC3C7;
 	color: #1A1C2C;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -58,6 +59,9 @@ body {
 #projects {
   top: 140px;
   background-color: #2196F3; /* Blue */
+}
+#projectsection{
+  margin-top: 50px;
 }
 
 #contactme {
@@ -257,7 +261,7 @@ footer {
     background-color: #555;
     color: #bbb;
     margin: 0 auto;
-    
+
 }
 
 form input, textarea {
