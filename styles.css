@@ -22,6 +22,8 @@ body {
   max-width: 1366px;
   margin: 0 auto;
   height: 850px;
+  border-radius: 75px;
+  box-shadow: 0 8px 12px 0 rgba(34, 60, 80, .16);
 }
 
 .sidenav {
@@ -171,7 +173,7 @@ body {
 }
 /* Adds shadow to image */
 .project-image {
-border-radius: 5px;
+border-radius: 10px;
 	box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
 	transition: all ease-in-out .2s;
 }
