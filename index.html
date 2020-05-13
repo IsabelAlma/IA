@@ -8,24 +8,25 @@
 </head>
 
 <div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#top" id="about">About</a>
   <a href="#projectsection" id="projects">Projects</a>
   <a href="#contact" id="contactme">Contact</a>
   <a href="https://www.dropbox.com/s/retkmzrrsk9dlqh/Isabel%20Almaguer%27s%20Resume%202020.docx?dl=0" id="resume">Resume</a>
 </div> 
+<button class="openbtn" onclick="openNav()">&#9776;</button>
 
-<body>
 <div class=container>
 
-	<div class="parallax"></div>
-<div class="intro">
+<body>
+
+<div class="introback">
+<div class=" intro">
 	<img class="profile-picture" src="https://media-exp1.licdn.com/dms/image/C4E03AQFrGanHO-uI3Q/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=4YkK1RrYVijIBZHsa6jCeacT3bvHwZjRmH5-OgWiC90" >
-	<h1>Isabel Almager</h1>
-	<h3>Business Intelligence Analyst at Global Custom Commerce / Blinds.com (a Home Depot company)</h3>
+	<h1 style="font-size:300%;">Isabel Almager</h1>
+	<h3 style="font-size:160%;">Business Intelligence Analyst at Global Custom Commerce / Blinds.com (a Home Depot company)</h3>
 	<p style="font-style: italic;">Bachelor of Science (B.S.), Computer Science </p>
 	<p style="font-style: italic;">Minor in Math and Art </p>
-
-
 
 <hr/>
 	
@@ -48,54 +49,80 @@
 	</div>
 	</div>
 	<hr/>
-
+</div>
 </div>
 
-	<div class="parallax"></div>
-	<div id="projectsection">
+
+<div id="projectsection">
 		<h3 class ="projects-heading">My Projects </h3>
 			<div class = "row">
 			<div class="column project-image-wrapper">
 				<h4>This Website!</h4>
-			<img  class="project-image myImg"
-			src= "images/wireframe.jpg" alt="TBD" style="width:100%;max-width:300px" onclick="onClick(this)">
+			<img  class="project-image" src="images/wireframe.jpg" style="width:100%;" onclick="openModal()">
 				</div>
 
 			<div class="column project-image-wrapper">
-				<h4>Project 2 - TBA</h4>
-			<img class="project-image myImg"   alt="TBD"  src="https://via.placeholder.com/300" style="width:100%;max-width:300px" onclick="onClick(this)">
+				<h4>Project 2</h4>
+			<img class="project-image" src="https://via.placeholder.com/300" style="width:100%;" onclick="openModal()">
 				</div>
 
 			<div class="column project-image-wrapper">	
-				<h4>Project 3 - TBA</h4>
-			<img class="project-image myImg" alt="TBD"  src="https://via.placeholder.com/300" style="width:100%;max-width:300px" onclick="onClick(this)">
+				<h4>Project 3</h4>
+			<img class="project-image" src="https://via.placeholder.com/300" style="width:100%;" onclick="openModal()">
 				</div>
 
 			<div class="column project-image-wrapper">
-				<h4>Project 4 - TBA</h4>
-			<img class="project-image myImg" alt="TBD"  src="https://via.placeholder.com/300" style="width:100%;max-width:300px" onclick="onClick(this)">
+				<h4>Project 4</h4>
+			<img class="project-image" src="https://via.placeholder.com/300" style="width:100%;" onclick="openModal()">
 			</div>
 
 
-		<div id="myModal"  class="modal">
+		 	<div id="myModal"  class="modal">
 		   <!-- The Close Button -->
- 		 <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+ 		  <span class="close cursor" onclick="closeModal()">&times;</span>
 		  <!-- Modal Content (The Image) -->
-		  <img class="modal-content" id="img01">
+		  	<div class="modal-content">
+		  		<div class="mySlides">
+		  		<img src="images/wireframe.jpg" style="width:100%" alt="123">  </div>
+		  		<div class="mySlides">
+		  		<img src="https://via.placeholder.com/300" style="width:100%">  </div>
+		  		<div class="mySlides">
+		  		<img src="https://via.placeholder.com/300"style="width:100%">  </div>
+		  		<div class="mySlides">
+		  		<img src="https://via.placeholder.com/300" style="width:100%">  </div>
+
+		  		<!-- Next/previous controls -->
+    		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 		  <!-- Modal Caption (Image Text) -->
-		  <div id="caption"></div>
-  			</div>
+		  <div class="caption-container">
+    	  <p id="caption"></p></div>
+
+    <div class="column">
+      <img class="demo cursor" src="images/wireframe.jpg" style="width:100%" onclick="currentSlide(1)" alt="This website was created following the  Web Development for Beginners Course presented by CareerFoundry. Changes were made to make it more personal, but the base design remains!"> 
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://via.placeholder.com/300" style="width:100%" onclick="currentSlide(2)" alt="TBA">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://via.placeholder.com/300" style="width:100%" onclick="currentSlide(3)" alt="TBA">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://via.placeholder.com/300" style="width:100%" onclick="currentSlide(4)" alt="TBA">
+    </div>
+    		</div>
 		</div>
 	</div>
 </div>
 
 	<script src="script.js"></script>
-
 </body>
 
-<div class="parallax"></div>
+</div>
+
 <footer id="contact">
-<section class="ft-contact">
+	<div class="ft-contact">
 			<form action="#">
 				<h3 style="text-align: center;">Contact Me</h3>
 				<label for="email">
@@ -111,17 +138,16 @@
 				</div>
 			</form>
 		</div>
-
-<section class="ft-social">
+	<div class="ft-social">
 		<ul class="links-list">
 				<a href="https://www.linkedin.com/in/almagueri/">
 					<img alt="Linkedin" src="images/linkedin.png" height="48" width="48"></a>
 						
 				<a href="https://github.com/IsabelAlma">
-					<img alt"Github" src="images/github.png" height="48" width="48"></a>
+					<img alt"Github" src="images/github.png"height="48" width="48"></a>
 
 				<a href="https://www.instagram.com/happy_bellyig/">
-					<img alt"Instagram" src="images/insta.png" height="48" width="48"></a>
+					<img alt"Instagram" src="images/insta.png"height="48" width="48"></a>
 		<ul/>
 		</div>
 
