@@ -1,24 +1,29 @@
+html, body {
+  overflow-x: hidden; /*negative margins and padding to extend the background in both directions. To avoid triggering horizontal scrolling*/
+}
+
 body {
 	background: #BDC3C7;
 	color: #1A1C2C;
+  font-family: sans-serif;
+  margin:0px;
   scroll-behavior: smooth;
-}
 
+}
 .container {
+
 	max-width: 1366px;
 	margin: 0 auto;
+
 }
 
-.parallax {
-  /* Set a specific height */
-  min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.introback {
+  background:#f2f2f2;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 850px;
 }
+
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
@@ -30,7 +35,43 @@ body {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
+/* The sidepanel links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  top: -25px;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  position: fixed;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  transition: top 0.3s ease-in-out; /* Transition effect when sliding down (and up) */
+}
+
+.openbtn :hover {
+  background-color: #444;
+}
 
 #mySidenav a {
   position: absolute; /* Position them relative to the browser window */
@@ -60,9 +101,6 @@ body {
   top: 140px;
   background-color: #2196F3; /* Blue */
 }
-#projectsection{
-  padding: 250px 0;
-}
 
 #contactme {
   top: 240px;
@@ -81,17 +119,13 @@ body {
   font-family: sans-serif;
    position: relative;
     left: 50%;
-    top: 50%;
-    z-index: 100;
-    height: 400px;
-    margin-top: -300px;
-
+    margin-top: 25px;
     width: 600px;
     margin-left: -300px;
-
 }
 
 .profile-picture {
+  margin-top: 130px;
 	border: 3px solid black; 
 	border-radius: 50%;
 	width: 150px;
@@ -107,6 +141,7 @@ body {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	font-family: sans-serif;
+  padding: 5px;
 }
 .i-am, .i-like {
 	text-align: center;
@@ -115,14 +150,24 @@ body {
 
 .about-list {
 	list-style: none;
-	padding: 0;
+	padding: 5px;
 } 
 
+#projectsection{
+  margin-top: 125px;
+  padding: 300px 0;
+}
 
 /* Heading of section */
 .projects-heading {
 	text-align: center;
-	font-family: sans-serif;	
+	font-family: sans-serif;
+    top: 50%;
+    z-index: 100;
+    padding: 0 2rem 2rem;
+    width: 600px;
+    margin-left: 25%
+  
 }
 /* Adds shadow to image */
 .project-image {
@@ -179,13 +224,6 @@ border-radius: 5px;
 }
 
 
- /* Style the Image Used to Trigger the Modal */
-.myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -197,7 +235,6 @@ border-radius: 5px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
@@ -208,17 +245,39 @@ border-radius: 5px;
   width: 80%;
   max-width: 700px;
 }
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Caption text */
+.caption-container {
   text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
 }
 
 /* Add Animation - Zoom in the Modal */
@@ -248,7 +307,10 @@ border-radius: 5px;
   font-weight: bold;
   transition: 0.3s;
 }
-
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
 .close:hover,
 .close:focus {
   color: #bbb;
@@ -256,25 +318,29 @@ border-radius: 5px;
   cursor: pointer;
 }
 
+#contact{
+   margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem;
+  background: rgba(0, 0, 0, 0.5);
 
+}
 footer {
     background-color: #555;
     color: #bbb;
-    margin: 0 auto;
 
 }
 
 form input, textarea {
-	padding: 5px;
 	border-radius: 5px;
 	width: 240px;
 	font-family: sans-serif;
 }
 
 form {
-  padding: 5px;
 	width: 250px;
-	margin: 0 auto;
+	margin: 0 auto; /* contact me */
+
 }
 
 form input[type="submit"] {
@@ -306,20 +372,27 @@ hr {
   font-family: sans-serif;
 
 }
-
-@media (max-width: 480px) {
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media only screen and (max-device-width: 480px) {
+      .sidenav { width: auto;}
+      .sidebar a {font-size: 18px;}
+}        
+@media only screen and (max-device-width: 375px) {
+  .intro .introback {
+    grid-template-columns: 100%;
+  }
+}
+@media (max-width: 375px) {
 	.about-grid {
 		grid-template-columns: 100%;
 	}
 }
-@media (max-width: 650px) {
-	.projects-grid {
-		grid-template-columns: 100%;
-	}
-}
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 600px){
   .modal-content {
     width: 100%;
   }
 } 
+
+
